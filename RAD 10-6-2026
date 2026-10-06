@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class AskName {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("What is your name? ");
+        String name = scanner.nextLine();
+
+        System.out.print("What is your age? ");
+        String age = scanner.nextLine();
+
+        System.out.print("What is your address? ");
+        String address = scanner.nextLine();
+
+        System.out.print("What is your weight? ");
+        String weight = scanner.nextLine();
+
+        System.out.print("What is your height? ");
+        String height = scanner.nextLine();
+        
+        System.out.println("Hi my name is " + name + ", I am " + age + " years old, i live at " + address + ", my weight is " + weight + "kg, and my height is " + height + "cm.");
+        
+        scanner.close();
+    }
+}
+
+
+public class Countdown {
+    public static void main(String[] args) {
+
+        int count = 50;
+
+        while (count >= 0) {
+            System.out.println(count);
+            
+            count--; 
+        }
+
+    }
+}
+
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+
+       while (true) {
+           System.out.print("Enter a number: ");
+           int n = input.nextInt();
+           if (n == 7) {
+               System.out.println("Skipping number 7!\n");
+               continue;
+           }
+           if (n > 30) {
+               System.out.println("Number must NOT be greater than 30!\n");
+               continue;
+           }
+           if (n % 30 == 0) {
+               System.out.println("Valid! You entered: " + n);
+               System.out.println("Stopping program...");
+               break; // STOP
+           } else {
+               System.out.println("Not divisible by 30. Try again.\n");
+           }
+       }
+       input.close();
+   }
+}
